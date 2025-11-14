@@ -2,7 +2,7 @@
 
 from typing import TYPE_CHECKING
 from langchain_core.tools import BaseTool
-from pydantic import ConfigDict, Field
+from pydantic import Field
 
 from langchain_community.tools.windy.utils import get_api_key
 

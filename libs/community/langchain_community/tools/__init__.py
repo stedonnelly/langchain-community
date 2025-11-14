@@ -324,6 +324,9 @@ if TYPE_CHECKING:
     from langchain_community.tools.wikipedia.tool import (
         WikipediaQueryRun,
     )
+    from langchain_community.tools.windy.get_point_forecast import (
+        WindyGetPointForecast,
+    )
     from langchain_community.tools.wolfram_alpha.tool import (
         WolframAlphaQueryRun,
     )
@@ -485,6 +488,7 @@ __all__ = [
     "VectorStoreQATool",
     "VectorStoreQAWithSourcesTool",
     "WikipediaQueryRun",
+    "WindyGetPointForecast",
     "WolframAlphaQueryRun",
     "WriteFileTool",
     "YahooFinanceNewsTool",
@@ -642,6 +646,7 @@ _module_lookup = {
     "VectorStoreQATool": "langchain_community.tools.vectorstore.tool",
     "VectorStoreQAWithSourcesTool": "langchain_community.tools.vectorstore.tool",
     "WikipediaQueryRun": "langchain_community.tools.wikipedia.tool",
+    "WindyGetPointForecast": "langchain_community.tools.windy.get_point_forecast",
     "WolframAlphaQueryRun": "langchain_community.tools.wolfram_alpha.tool",
     "WriteFileTool": "langchain_community.tools.file_management",
     "YahooFinanceNewsTool": "langchain_community.tools.yahoo_finance_news",
