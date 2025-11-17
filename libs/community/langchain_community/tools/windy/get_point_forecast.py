@@ -4,12 +4,7 @@ from typing import Type
 from langchain_community.tools.windy.base import WindyBaseTool
 from langchain_core.callbacks import CallbackManagerForToolRun
 from pydantic import BaseModel, Field
-from windy_api.models.point_request import (
-    Levels,
-    ModelTypes,
-    ValidParameters,
-    WindyPointRequest,
-)
+from windy_api.models.point_request import Levels, ModelTypes, ValidParameters
 from windy_api.schema.schema import WindyForecastResponse
 
 
@@ -44,9 +39,9 @@ class WindyGetPointForecast(WindyBaseTool):
         self,
         latitude: float,
         longitude: float,
-        model: ModelTypes,
-        parameters: list[ValidParameters],
-        levels: list[Levels],
+        model: ModelTypes = ModelTypes.GFS,
+        parameters: list[ValidParameters] = [ValidParameters.TEMP],
+        levels: list[Levels] = [Levels.SURFACE],
         run_manager: CallbackManagerForToolRun | None = None,
     ) -> WindyForecastResponse | str:
         try:
